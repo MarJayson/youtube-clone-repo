@@ -28,7 +28,7 @@ const Feed = ({ category }) => {
 
   return (
     <div className="feed">
-      {data.map((item, index) => {
+      {data.map((item) => {
         return (
           <Link
             key={item.id}

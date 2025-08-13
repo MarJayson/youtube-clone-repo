@@ -53,7 +53,7 @@ const PlayVideo = () => {
 
   useEffect(() => {
     fetchCommentData();
-  }, []);
+  }, [videoId]);
 
   return (
     <div className="play-video">
