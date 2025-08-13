@@ -11,14 +11,21 @@ const App = () => {
     <>
       <Navbar setSidebar={setSidebar} />
       <Routes>
-        {/* Index route ensures it loads immediately at the root */}
+        {/* Homepage */}
         <Route index element={<Home sidebar={sidebar} />} />
+        <Route
+          path="/youtube-clone-repo"
+          element={<Home sidebar={sidebar} />}
+        />
 
-        {/* Video page */}
+        {/* Video route for dev */}
         <Route path="/video/:categoryId/:videoId" element={<Video />} />
 
-        {/* Catch-all fallback to Home */}
-        <Route path="*" element={<Home sidebar={sidebar} />} />
+        {/* Video route for production */}
+        <Route
+          path="/youtube-clone-repo/video/:categoryId/:videoId"
+          element={<Video />}
+        />
       </Routes>
     </>
   );
